@@ -21,7 +21,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Set up Maven
-      run: mvn 3.9.11
+      run: mvn -version
 
     - name: Run TestNG Suite
       run: mvn clean test -DsuiteXmlFile=testng.xml
