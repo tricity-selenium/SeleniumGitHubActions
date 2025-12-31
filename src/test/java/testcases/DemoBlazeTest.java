@@ -29,7 +29,7 @@ public class DemoBlazeTest {
 	  
 	  driver.get("https://demoblaze.com/index.html");
 	  
-	  Assert.assertEquals("STORE", driver.getTitle());
+	  Assert.assertEquals("QASTORE", driver.getTitle());
 	  
 	  
 	  
