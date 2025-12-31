@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,9 +14,14 @@ public class DemoBlazeTest {
   @Test
   public void verifyPageTitle() {
 	  
+	  ChromeOptions options = new ChromeOptions();
+	  options.addArguments("--headless");
+	  options.addArguments("--no-sandbox");
+	  options.addArguments("--disable-dev-shm-usage");
+
 	  WebDriverManager.chromedriver().setup();
 	  
-	  WebDriver driver = new ChromeDriver();
+	  WebDriver driver = new ChromeDriver(options);
 	  
 	  driver.manage().window().maximize();
 	  
